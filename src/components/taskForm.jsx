@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState, useRef }  from 'react';
 import '../style_pages/taskForm.css';
 import {v4 as uuidv4} from 'uuid';
 
@@ -26,6 +26,7 @@ function TaskForm (props){
   return (
     <form className="task__form" onSubmit={sendHandler}>
       <input 
+        name='inputText'
         className='input__text' 
         type="text" 
         placeholder='Enter your task here' 
